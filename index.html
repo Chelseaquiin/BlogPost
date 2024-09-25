@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CQ_BlogPosts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h3>CQ_BlogPosts</h3>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="/Pages/About.html" target="_blank">About</a></li>
+            <li><a href="/Pages/Contact.html" target="_blank">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="aside">
+        <aside></aside>
+        <h2>Subscribe to my blog</h2>
+        <form>
+            <section>
+                <label for="name">Name:</label>
+                <br>
+                <input type="text" name="name" required>
+            </section>
+            
+            <br>
+            <section>
+                <label for="email">Email:</label>
+                <br>
+                <input type="email" name="email" required>
+            </section>
+
+            <br>
+            <section>
+                <label for="message">Comment:</label>
+                <br>
+                <textarea name="message" id="message">Enter a message</textarea>
+            </section>
+
+            <br>
+            <input type="submit" name="submit">
+        </form>
+        </aside>
+    </section>
+    <article>
+        <section class="introduction">
+            <img class="images" src="/Images/0_BWwX4DFwR0zBPDQE.webp" alt="Cars being assembled">
+            <h2>Understanding C# Assemblies</h1>
+            <p>If you have built a few C# projects on Visual Studio and you are still confused about what an assembly is, this
+                article
+                will help clarify it.
+            
+                According to Microsoft, “An assembly is a collection of types and resources that are built to work together and form
+                a
+                logical unit of functionality.”
+            
+                No. Don’t panic. I am not about to confuse you any further. This article aims to break it down for you using your
+                knowledge of Visual studio. Follow me closely, please.
+        </section>
+        <section class="mainContent">
+            <h2>Main Content</h2>
+            <p>When you create a new Console application project on your Visual Studio IDE, that’s an assembly. An executable
+                assembly
+                (.exe). A new Console application project has the dependencies file and the program.cs file. You can add new classes
+                to
+                your console app project. All of them are still inside one assembly.</p>
+                <img class="images" src="/Images/a1.webp" alt="Cars being assembled">
+            
+                <p>Every console application produces the .exe file extension. There’s another type of file extension. It’s the .dll
+                file
+                extension. DLL stands for Dynamic-Link Library.</p>
+            
+                <p>How do we generate the .dll file extension? This file extension is generated when creating a new Class Library
+                project.
+                Class Library projects are different from Console App projects in the sense that console app projects are executable
+                projects while class library projects aren’t.</p>
+            
+                <p>So, what does it mean for a project to be an executable project? It simply means that you can run the project, from
+                its
+                entry point, which is usually the Program.cs file in an executable project. Class libraries do not have an entry
+                point.</p>
+                <img class="images" src="/Images/a2.webp" alt="Cars being assembled">
+
+                <p>In the picture above, I added a class library to my Solutions project. And unlike its console app counterpart, the class
+                library has no entry point. No program.cs file, where one can run their code. It’s just a collection of classes. You
+                can’t run a simple Console.WriteLine(“Hello World”); and it would run.</p>
+                
+                <p>You might be wondering what the need for class libraries is. According to Microsoft, “Class libraries are the shared
+                library concept for .NET. They enable you to componentize useful functionality into modules that can be used by multiple
+                applications.”</p>
+                
+                <p>In simple terms, class libraries help you group your work into useful and similar functionalities.
+                
+                You can have a class library that has different folders — one for domains and another one for enums. So, for every enum
+                that you create, you can move it to the enums folder. The same goes for the domain. It’s there to make your work
+                cleaner.</p>
+                
+                <p>Now, what happens after you have written a code and you want to check if indeed the code runs? How do you handle that?
+                
+                I have two projects under my ConsoleApp2 solution. Two different projects/assemblies. One is a Console application and
+                the other one is a class library. The console application is always there for you to test if what you have built is
+                working and this is possible because it has an entry point.</p>
+                
+                <p>To be able to test your class library code in your console application project, you have to first reference the class
+                library project in your console application project. This can be done by right-clicking on the dependencies in the
+                console application project. You will see an option to add a project reference. Click on it. Then you will see a list of
+                possible projects that you can reference. Click on the one you want and press okay.</p>
+                <img class="images" src="/Images/a3.webp" alt="Cars being assembled">
+
+                <p>We only have one project file here because we created just two projects. If we are building a complex application where
+                we needed more than two projects, you are going to see all of them listed. So, you will click on the one(s) that you
+                want to add as a reference.</p>
+                
+                <p>After doing this, you can go ahead and import a namespace. This is done by doing, “using [the namespace of the project
+                you just added as a reference];”
+                
+                After doing all of this, you can now easily create an instance of the class you referenced.</p>
+        </section>
+        <section class="conclusion">
+            <h2>Conclusion</h2>
+            <p>I originally made this article on my medium page. I will include the link to my Medium page on my footer page. So that you can go over there and read more of these.</p>
+            
+        </section>
+        
+    </article>
+    <footer>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/uzoamaka-nweze-43241a106" target="_blank">LinkedIn</a></li>
+            <li><a href="https://medium.com/@uzonweze" target="_blank">Medium</a></li>
+            <li><a href="https://github.com/Chelseaquiin" target="_blank">Github</a></li>
+        </ul>
+
+        &copy; 2024 CQ_BlogPosts. All Rights Reserved.
+
+    </footer>
+</body>
+</html>
